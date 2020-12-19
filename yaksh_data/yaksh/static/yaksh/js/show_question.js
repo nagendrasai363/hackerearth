@@ -49,14 +49,15 @@ function append_tag(tag){
 }
 $(document).ready(function() {
     $("#questions-table").tablesorter({});
-    $("#checkall").change(function(){
+    $("#checkall").click(function(){
+        console.log("checked!");
         if($(this).prop("checked")) {
-                $("#filtered-questions input:checkbox").each(function(index, element) {
+                $("#filtered-questions input:checkbox").each(function(element) {
                 $(this).prop('checked', true);
                 });
         }
         else {
-                $("#filtered-questions input:checkbox").each(function(index, element) {
+                $("#filtered-questions input:checkbox").each(function(element) {
                 $(this).prop('checked', false);
                 });
         }
